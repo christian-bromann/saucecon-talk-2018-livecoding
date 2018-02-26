@@ -14,7 +14,7 @@ exports.config = {
     port: '9515',
     path: '/',
     
-    execArgv: ['--inspect'],
+    // execArgv: ['--inspect'],
     //
     // ==================
     // Specify Test Files
@@ -139,7 +139,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: ['spec', 'allure'],
+    reporters: ['spec'],
     
     //
     // Options to be passed to Mocha.
@@ -217,8 +217,12 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine) or a step (in Cucumber) ends.
      * @param {Object} test test details
      */
-    // afterTest: function (test) {
-    // },
+    afterTest: function (test) {
+        if (test.passed === false) {
+            const logs = browser.log('browser')
+            console.log(JSON.stringify(logs, null, 4));
+        }
+    }
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
@@ -258,8 +262,8 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onComplete: function(exitCode, config, capabilities) {
-        var generation = allure(['generate', 'allure-results'])
-        return new Promise((resolve) => generation.on('exit', resolve))
-    }
+    // onComplete: function(exitCode, config, capabilities) {
+    //     var generation = allure(['generate', 'allure-results'])
+    //     return new Promise((resolve) => generation.on('exit', resolve))
+    // }
 }
