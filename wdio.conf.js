@@ -13,6 +13,7 @@ exports.config = {
     port: '9515',
     path: '/',
     
+    execArgv: ['--inspect'],
     //
     // ==================
     // Specify Test Files
@@ -144,7 +145,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        compilers: ['js:babel-register']
+        compilers: ['js:babel-register'],
+        timeout: 60 * 1000 * 10
     },
     //
     // =====
