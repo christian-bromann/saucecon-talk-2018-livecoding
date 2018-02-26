@@ -1,5 +1,6 @@
+const allure = require('allure-commandline')
+
 exports.config = {
-    
     //
     // =================
     // Service Providers
@@ -138,7 +139,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: ['spec'],
+    reporters: ['spec', 'allure'],
     
     //
     // Options to be passed to Mocha.
@@ -257,6 +258,8 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onComplete: function(exitCode, config, capabilities) {
-    // }
+    onComplete: function(exitCode, config, capabilities) {
+        var generation = allure(['generate', 'allure-results'])
+        return new Promise((resolve) => generation.on('exit', resolve))
+    }
 }

@@ -5,7 +5,6 @@ describe('SauceCon 2018 website', () => {
     it('should have a correct title', () => {
         browser.url('/')
         assert.equal(SauceConPage.title, 'SauceCon 2018')
-        debugger
     })
     
     it('should open the popup for the first key note', () => {
@@ -15,6 +14,6 @@ describe('SauceCon 2018 website', () => {
     
     it('should be able to close the popup', () => {
         SauceConPage.popupClose.click()
-        browser.waitUntil(() => SauceConPage.popup.isVisible() === false)
+        browser.waitUntil(() => SauceConPage.popup.isVisible() === false, 10)
     })
 })

@@ -14,8 +14,10 @@
     "webdriverio": "^4.10.2"
   },
   "devDependencies": {
+    "allure-commandline": "^2.5.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "wdio-allure-reporter": "^0.3.2"
   },
   "scripts": {
     "test": "wdio"
