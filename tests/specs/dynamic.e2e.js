@@ -1,8 +1,8 @@
-var expect = require('chai').expect;
-var DynamicPage = require('../pageobjects/dynamic.page');
+import { expect } from 'chai';
+import DynamicPage from '../pageobjects/dynamic.page';
 
-describe('dynamic loading', function () {
-    it('should be an button on the page', function () {
+describe('dynamic loading', () => {
+    it('should be an button on the page', () => {
         DynamicPage.open();
         expect(DynamicPage.loadedPage.isExisting()).to.be.equal(false);
 

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "wdio wdio.local.conf",
-    "ci": "wdio wdio.ci.conf"
+    "test": "npm run wdio wdio.local.conf",
+    "ci": "npm run wdio wdio.ci.conf",
+    "wdio": "babel-node ./node_modules/.bin/wdio"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "chromedriver": "^2.35.0",
     "wdio-chromedriver-service": "^0.1.2",

@@ -1,4 +1,4 @@
-var wdioConf = require('./wdio.conf')
+import wdioConf from './wdio.conf';
 
 exports.config = Object.assign(wdioConf.config, {
     // First, you can define how many instances should be started at the same time. Let's
