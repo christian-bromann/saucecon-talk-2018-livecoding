@@ -7,6 +7,7 @@ describe('dynamic loading', () => {
         expect(DynamicPage.loadedPage.isExisting()).to.be.equal(false);
 
         DynamicPage.btnStart.click();
+        debugger;
         DynamicPage.loadedPage.waitForExist();
         expect(DynamicPage.loadedPage.isExisting()).to.be.equal(true);
     });

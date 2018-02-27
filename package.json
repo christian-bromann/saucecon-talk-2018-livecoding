@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "test": "npm run wdio wdio.local.conf",
+    "test:debug": "npm run wdio:debug wdio.local.conf",
     "ci": "npm run wdio wdio.ci.conf",
-    "wdio": "babel-node ./node_modules/.bin/wdio"
+    "wdio": "node -r babel-register ./node_modules/.bin/wdio",
+    "wdio:debug": "node -r babel-register --inspect ./node_modules/.bin/wdio"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,6 @@
     "wdio-mocha-framework": "^0.5.12",
     "wdio-sauce-service": "^0.4.8",
     "wdio-spec-reporter": "^0.1.3",
-    "webdriverio": "^4.10.2"
+    "webdriverio": "^4.11.0"
   }
 }
