@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "wdio"
+    "test": "wdio wdio.local.conf",
+    "ci": "wdio wdio.ci.conf"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding#readme",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chromedriver": "^2.35.0",
+    "wdio-chromedriver-service": "^0.1.2",
     "wdio-mocha-framework": "^0.5.12",
     "wdio-sauce-service": "^0.4.8",
     "wdio-spec-reporter": "^0.1.3",
