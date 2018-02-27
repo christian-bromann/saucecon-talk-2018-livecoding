@@ -1,0 +1,19 @@
+{
+  "name": "livecoding",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christian-bromann/saucecon-talk-2018-livecoding.git"
+  },
+  "keywords": [],
+  "author": "Christian Bromann <christian@saucelabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding/issues"
+  },
+  "homepage": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding#readme"
+}
