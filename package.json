@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding/issues"
   },
-  "homepage": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding#readme"
+  "homepage": "https://github.com/christian-bromann/saucecon-talk-2018-livecoding#readme",
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.5.12",
+    "wdio-sauce-service": "^0.4.8",
+    "wdio-spec-reporter": "^0.1.3",
+    "webdriverio": "^4.10.2"
+  }
 }
